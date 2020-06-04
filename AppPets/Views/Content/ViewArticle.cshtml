@@ -1,0 +1,13 @@
+﻿@model AppPets.Models.Article
+@{
+    ViewBag.Title = Model.Name;
+}
+<main>
+    <h2>@Html.DisplayFor(model => Model.Name)</h2>
+    <div class="articles">
+        @Html.DisplayFor(model => Model.Author)
+        <p>@Html.DisplayFor(model => Model.Date)
+        <p>@Html.DisplayFor(model => Model.Content)
+    </div>  
+    <div class="button">@Html.ActionLink("Назад", "ShowArticle")</div>
+</main>

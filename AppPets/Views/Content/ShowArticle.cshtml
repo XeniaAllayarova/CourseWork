@@ -1,0 +1,28 @@
+﻿@model IEnumerable<AppPets.Models.Article>
+
+@{
+    ViewBag.Title = "Статьи";
+}
+<main>
+    <h2>Статьи</h2>
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.ActionLink(item.Name, "ViewArticle", new { id = item.Id })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <div class="button">
+            @Html.ActionLink("Добавить статью", "AddArticle")
+        </div>
+</main>

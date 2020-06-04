@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Поиск";
+}
+
+<main>
+    <h2>Поиск</h2>
+    <form asp-controller="Place" asp-action="ShowPlace">
+        <p>
+            <input type="text" name="SearchString">
+            <input type="submit" value="Найти" с />
+        </p>
+    </form>
+
+    <div class="form-group">
+        <div class="button">
+            @Html.ActionLink("Добавить место","Place","Content")
+        </div>
+    </div>
+</main>
